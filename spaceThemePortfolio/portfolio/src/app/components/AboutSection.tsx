@@ -39,7 +39,7 @@ export default function AboutSection() {
 
           {/* Content */}
           <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.95)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-            I am a 22-year-old developer based in Mathura, India. Fluent in English and Hindi, I specialize in crafting high-performance, visually stunning web applications using Next.js, Python, and scalable architecture paradigms.
+            I am a 23-year-old developer based in Mathura, India. Fluent in English and Hindi, I specialize in crafting high-performance, visually stunning web applications using Next.js, Python, and scalable architecture paradigms.
           </motion.p>
           <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.9)', lineHeight: 1.9, marginBottom: '2rem' }}>
             Over the past 3 years, I have successfully executed projects ranging from robust backend systems to interactive frontends. I'm currently open for freelance opportunities to help bring your high-impact ideas to life.

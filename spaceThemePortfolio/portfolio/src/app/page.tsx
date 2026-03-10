@@ -111,9 +111,6 @@ export default function Home() {
         <div ref={el => { sectionRefs.current[5] = el; }}>
           <ContactSection />
         </div>
-        
-        {/* Final spacer at the end horizon */}
-        <div style={{ height: '30vh' }} />
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Briefcase, TrendingUp, Smartphone, Rocket } from 'lucide-react';
 
 const experiences = [
   {
@@ -27,10 +28,10 @@ const experiences = [
 ];
 
 const achievements = [
-  { icon: '💼', label: 'Open for Freelance' },
-  { icon: '📈', label: 'SEO Optimization' },
-  { icon: '📱', label: 'Mobile App Dev' },
-  { icon: '🚀', label: 'Fast Delivery' },
+  { icon: Briefcase, label: 'Open for Freelance', color: '#00d4ff' },
+  { icon: TrendingUp, label: 'SEO Optimization', color: '#8b5cf6' },
+  { icon: Smartphone, label: 'Mobile App Dev', color: '#ff6b35' },
+  { icon: Rocket, label: 'Fast Delivery', color: '#ffd700' },
 ];
 
 export default function ExperienceSection() {
@@ -122,43 +123,66 @@ export default function ExperienceSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
-        style={{ width: '100%', maxWidth: '800px' }}
+        style={{ width: '100%', maxWidth: '800px', marginTop: '2rem' }}
       >
-        <h3
-          style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.75rem',
-            letterSpacing: '0.25em',
-            textTransform: 'uppercase',
-            color: 'rgba(255,215,0,0.95)',
-            marginBottom: '1.25rem',
-          }}
-        >
-          Orbital Achievements
-        </h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '1rem' }}>
-          {achievements.map((ach) => (
-            <motion.div
-              key={ach.label}
-              whileHover={{ y: -4, boxShadow: '0 0 30px rgba(255,215,0,0.2)' }}
-              style={{
-                background: 'rgba(255,215,0,0.04)',
-                border: '1px solid rgba(255,215,0,0.15)',
-                borderRadius: '12px',
-                padding: '1.25rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.6rem',
-                cursor: 'default',
-                transition: 'all 0.3s ease',
-              }}
-            >
-              <span style={{ fontSize: '1.5rem' }}>{ach.icon}</span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.08em', color: 'rgba(232,244,253,0.9)', lineHeight: 1.4 }}>
-                {ach.label}
-              </span>
-            </motion.div>
-          ))}
+        <div className="hud-line" style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
+          <span style={{ color: '#ffd700' }}>ORBITAL_CAPABILITIES_DETECTED</span>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '1.25rem' }}>
+          {achievements.map((ach) => {
+            const Icon = ach.icon;
+            return (
+              <motion.div
+                key={ach.label}
+                whileHover={{ y: -6, scale: 1.02 }}
+                style={{
+                  background: 'rgba(5,10,20,0.6)',
+                  border: `1px solid ${ach.color}25`,
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '1rem',
+                  cursor: 'default',
+                  transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+                  boxShadow: `inset 0 0 20px ${ach.color}08`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = `${ach.color}60`;
+                  e.currentTarget.style.boxShadow = `inset 0 0 20px ${ach.color}15, 0 8px 30px ${ach.color}20`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = `${ach.color}25`;
+                  e.currentTarget.style.boxShadow = `inset 0 0 20px ${ach.color}08`;
+                }}
+              >
+                <div style={{ 
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '12px',
+                  background: `${ach.color}15`,
+                  color: ach.color,
+                  marginBottom: '4px'
+                }}>
+                  <Icon size={22} strokeWidth={2} />
+                </div>
+                <span style={{ 
+                  fontFamily: 'var(--font-display)', 
+                  fontWeight: 500,
+                  fontSize: '0.95rem', 
+                  letterSpacing: '0.02em', 
+                  color: 'rgba(232,244,253,0.95)', 
+                  lineHeight: 1.3 
+                }}>
+                  {ach.label}
+                </span>
+              </motion.div>
+            );
+          })}
         </div>
       </motion.div>
     </section>

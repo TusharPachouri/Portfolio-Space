@@ -53,7 +53,7 @@ export default function ContactSection() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   return (
-    <section className="section" id="contact" style={{ flexDirection: 'column', gap: '3rem', paddingTop: '6rem', minHeight: '120vh' }}>
+    <section className="section" id="contact" style={{ flexDirection: 'column', gap: '3rem', paddingTop: '6rem', paddingBottom: '3rem', minHeight: '100vh' }}>
       {/* Event horizon glow effect */}
       <div
         style={{
