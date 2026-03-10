@@ -73,7 +73,7 @@ export default function ContactSection() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ textAlign: 'center', position: 'relative' }}
       >
         <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
@@ -102,7 +102,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
           className="glass-card"
         >
           <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.5rem', color: 'var(--color-star-white)' }}>
@@ -191,7 +191,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const, delay: 0.1 }}
           style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
           <div className="glass-card" style={{ marginBottom: '0' }}>

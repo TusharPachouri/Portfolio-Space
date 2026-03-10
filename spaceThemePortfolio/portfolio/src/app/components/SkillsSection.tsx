@@ -27,7 +27,7 @@ const nodeVariants: Variants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -38,7 +38,7 @@ export default function SkillsSection() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ textAlign: 'center' }}
       >
         <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>

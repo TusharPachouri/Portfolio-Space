@@ -40,7 +40,7 @@ export default function ExperienceSection() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ textAlign: 'center' }}
       >
         <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
@@ -75,7 +75,7 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: i * 0.15 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const, delay: i * 0.15 }}
               className="orbit-item"
               style={{ borderColor: exp.color + '30' }}
             >
@@ -119,7 +119,7 @@ export default function ExperienceSection() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ width: '100%', maxWidth: '800px' }}
       >
         <h3
