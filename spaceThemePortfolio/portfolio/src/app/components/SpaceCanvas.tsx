@@ -38,19 +38,36 @@ export default function SpaceCanvas({ scrollProgress }: SpaceCanvasProps) {
   }, []);
 
   const loadFrames = useCallback(() => {
-    for (let i = 0; i < TOTAL_FRAMES; i++) {
-      const img = new Image();
-      const idx = i;
-      const padded = String(idx).padStart(5, '0');
-      img.src = `${FRAME_PATH}${padded}.png`;
-      img.onload = () => {
-        loadedRef.current[idx] = true;
-        // Draw first frame immediately when it loads
-        if (idx === 0 && currentFrameRef.current === 0) {
-          drawFrame(0);
-        }
+    // Optimize by loading in batches of 4 to prevent network choking
+    const BATCH_SIZE = 4;
+    
+    for (let i = 0; i < BATCH_SIZE; i++) {
+      const loadNextInBatch = (idx: number) => {
+        if (idx >= TOTAL_FRAMES) return;
+        
+        const img = new Image();
+        const padded = String(idx).padStart(5, '0');
+        img.src = `${FRAME_PATH}${padded}.png`;
+        
+        // Decode image asynchronously to avoid main thread blocking
+        img.decode().then(() => {
+          loadedRef.current[idx] = true;
+          framesRef.current[idx] = img;
+          
+          if (idx === 0 && currentFrameRef.current === 0) {
+            drawFrame(0);
+          }
+          // Load next frame in this batch sequence
+          loadNextInBatch(idx + BATCH_SIZE);
+        }).catch(() => {
+          // Fallback if decode fails
+          loadedRef.current[idx] = true;
+          framesRef.current[idx] = img;
+          loadNextInBatch(idx + BATCH_SIZE);
+        });
       };
-      framesRef.current[idx] = img;
+      
+      loadNextInBatch(i);
     }
   }, [drawFrame]);
 
