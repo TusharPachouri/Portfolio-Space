@@ -4,33 +4,33 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    role: 'Senior Frontend Engineer',
-    company: 'Nova Systems',
-    period: '2023 — Present',
-    description: 'Leading the frontend architecture of a real-time collaborative platform serving 2M+ users. Pioneer of the micro-frontend strategy enabling 10x deployment velocity.',
+    role: 'Full-Stack Developer (Freelance)',
+    company: 'Self-Employed',
+    period: 'Feb 2022 — Present',
+    description: 'Built robust Node.js applications. Implemented secure JWT authentication. Designed and tested RESTful APIs for scalable solutions.',
     color: '#ff6b35',
   },
   {
-    role: 'Full-Stack Developer',
-    company: 'Quantum Labs',
-    period: '2021 — 2023',
-    description: 'Built and shipped 8 production-grade applications with React and Node.js. Reduced time-to-interactive by 68% through strategic performance engineering.',
-    color: '#ffd700',
+    role: 'B.Tech CSE (Web Dev)',
+    company: 'Lovely Professional University',
+    period: '2020 — 2024',
+    description: 'Specialization in Web Development. Built full-stack projects, learned core scalable architectures, and solved complex algorithmic problems.',
+    color: '#00d4ff',
   },
   {
-    role: 'Software Engineer',
-    company: 'Stellar Dev Co.',
-    period: '2019 — 2021',
-    description: 'Developed scalable REST APIs and data pipelines processing 500K+ daily events. Awarded "Most Impactful Engineer" 3 quarters in a row.',
-    color: '#ff4500',
+    role: 'Higher Secondary (HSC)',
+    company: 'Kendriya Vidyalaya Mathura',
+    period: '2019 — 2020',
+    description: 'Completed 12th grade with 74.2% in Physics, Chemistry, Mathematics (PCM), and Computer Science.',
+    color: '#8b5cf6',
   },
 ];
 
 const achievements = [
-  { icon: '🏆', label: 'AWS Certified Solutions Architect' },
-  { icon: '⭐', label: 'GitHub Stars: 2.4K+' },
-  { icon: '🎯', label: 'Speaker — JSConf 2024' },
-  { icon: '🚀', label: 'Products Shipped: 40+' },
+  { icon: '💼', label: 'Open for Freelance' },
+  { icon: '📈', label: 'SEO Optimization' },
+  { icon: '📱', label: 'Mobile App Dev' },
+  { icon: '🚀', label: 'Fast Delivery' },
 ];
 
 export default function ExperienceSection() {
@@ -47,7 +47,7 @@ export default function ExperienceSection() {
           <span>SECTOR 05 — ACCRETION DISK // MISSION LOG</span>
         </div>
         <h2 className="section-title">
-          <span className="text-gradient-fire">Experience</span> &amp; Missions
+          <span className="text-gradient-fire">Experience</span> &amp; Education
         </h2>
         <p style={{ color: 'rgba(232,244,253,0.5)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.15em', marginTop: '0.5rem' }}>
           GRAVITATIONAL HISTORY OF MY JOURNEY

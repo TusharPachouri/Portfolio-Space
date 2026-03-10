@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const sections = ['Hero', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
+const sections = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
 
 interface NavProps {
   activeSection: number;
@@ -34,7 +34,7 @@ export default function Navigation({ activeSection, scrollProgress, onNavClick }
         }}
       >
         <a href="#hero" className="nav-logo">
-          NOVA<span style={{ color: 'rgba(232,244,253,0.3)' }}>.DEV</span>
+          TUSHAR<span style={{ color: 'rgba(232,244,253,0.3)' }}>.DEV</span>
         </a>
         <ul className="nav-links">
           {sections.map((section, idx) => (

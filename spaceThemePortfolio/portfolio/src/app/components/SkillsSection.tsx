@@ -1,23 +1,19 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const skills = [
-  { icon: '⚛️', name: 'React', color: '#61DAFB' },
   { icon: '▲', name: 'Next.js', color: '#ffffff' },
-  { icon: '🟦', name: 'TypeScript', color: '#3178C6' },
-  { icon: '🟩', name: 'Node.js', color: '#8CC84B' },
+  { icon: '🌐', name: 'Web Dev', color: '#4a9eff' },
+  { icon: '🟨', name: 'JavaScript', color: '#F7DF1E' },
   { icon: '🐍', name: 'Python', color: '#FFD43B' },
-  { icon: '🗄️', name: 'SQL', color: '#F29111' },
-  { icon: '🔴', name: 'Redis', color: '#D82C20' },
-  { icon: '🐋', name: 'Docker', color: '#2496ED' },
-  { icon: '☁️', name: 'AWS', color: '#FF9900' },
-  { icon: '🎨', name: 'Three.js', color: '#049EF4' },
-  { icon: '🌀', name: 'GSAP', color: '#88CE02' },
-  { icon: '💜', name: 'GraphQL', color: '#E10098' },
+  { icon: '⚙️', name: 'C++', color: '#00599C' },
+  { icon: '🎨', name: 'Web Design', color: '#E10098' },
+  { icon: '🔍', name: 'SEO', color: '#8CC84B' },
+  { icon: '🧩', name: 'Problem Mgt.', color: '#ff6b35' },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -25,7 +21,7 @@ const containerVariants = {
   },
 };
 
-const nodeVariants = {
+const nodeVariants: Variants = {
   hidden: { opacity: 0, scale: 0.6, y: 20 },
   visible: {
     opacity: 1,

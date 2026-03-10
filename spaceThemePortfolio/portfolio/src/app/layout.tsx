@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alex Nova | Developer Journey",
-  description: "A cinematic developer portfolio traveling from Earth to a black hole.",
+  title: "Tushar Pachouri | Developer Portfolio",
+  description: "Cinematic developer portfolio of Tushar Pachouri, a Full-Stack Developer and UI/UX Engineer.",
 };
 
 export default function RootLayout({

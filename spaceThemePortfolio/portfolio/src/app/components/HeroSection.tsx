@@ -31,9 +31,9 @@ export default function HeroSection() {
 
         {/* Main Title */}
         <div className="display-xl" style={{ marginBottom: '1.5rem', lineHeight: 1 }}>
-          <span className="text-gradient-blue">Alex</span>
+          <span className="text-gradient-blue">Tushar</span>
           <br />
-          <span style={{ color: 'var(--color-star-white)', fontWeight: 200 }}>Nova</span>
+          <span style={{ color: 'var(--color-star-white)', fontWeight: 200 }}>Pachouri</span>
         </div>
 
         {/* Subtitle */}
@@ -45,14 +45,14 @@ export default function HeroSection() {
           <p
             style={{
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.9rem',
-              letterSpacing: '0.3em',
+              fontSize: '0.8rem',
+              letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: 'var(--color-glow-cyan)',
               marginBottom: '1.5rem',
             }}
           >
-            Full-Stack Developer · Creative Technologist
+            Full-Stack Developer · UI/UX Engineer
           </p>
           <p
             style={{
@@ -64,8 +64,7 @@ export default function HeroSection() {
               fontWeight: 300,
             }}
           >
-            I build immersive digital experiences that live at the edge of
-            technology and design. From Earth to the event horizon.
+            I design and build high-performance digital products that merge creativity with functionality. My focus is delivering scalable, user-centric solutions that make an impact.
           </p>
 
           {/* CTA Buttons */}

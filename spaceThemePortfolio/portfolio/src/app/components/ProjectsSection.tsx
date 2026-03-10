@@ -1,56 +1,66 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const projects = [
   {
     id: 1,
-    title: 'NovaSphere',
-    description: 'A real-time collaborative 3D design playground built with WebGL and WebRTC. Used by 50K+ designers worldwide.',
-    tags: ['Three.js', 'WebRTC', 'React', 'Node.js'],
-    color: '#4a9eff',
-    emoji: '🌐',
-    link: '#',
+    title: 'Nebula Blog',
+    description: 'An interactive platform for users to create, manage, and discover blog content with AI-powered content generation.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Gemini AI'],
+    color: '#8b5cf6',
+    emoji: '📝',
+    link: 'https://nebula-blog.tusharpachouri.com',
     year: '2024',
   },
   {
     id: 2,
-    title: 'Quantum AI',
-    description: 'AI-powered financial analytics platform processing 10M+ data points per second with sub-100ms latency.',
-    tags: ['Python', 'TensorFlow', 'AWS', 'GraphQL'],
+    title: '3D Portfolio',
+    description: 'An interactive portfolio featuring 3D models and animations to showcase projects and skills dynamically.',
+    tags: ['Three.js', 'Next.js', 'React', 'CSS Anim'],
     color: '#00d4ff',
-    emoji: '🤖',
-    link: '#',
+    emoji: '🌌',
+    link: 'https://tusharpachouri.com',
     year: '2024',
   },
   {
     id: 3,
-    title: 'OrbitOS',
-    description: 'Custom micro-frontend framework enabling independent deployments across 200+ web properties simultaneously.',
-    tags: ['TypeScript', 'Webpack', 'Docker', 'K8s'],
-    color: '#8b5cf6',
-    emoji: '🚀',
-    link: '#',
-    year: '2023',
+    title: 'Video Streaming',
+    description: 'A secure platform for video streaming where users can upload videos, customize profiles, and interact with content.',
+    tags: ['Node.js', 'MongoDB', 'Cloudinary', 'JWT'],
+    color: '#ff6b35',
+    emoji: '🎬',
+    link: 'https://video-streaming-application.tusharpachouri.com',
+    year: '2024',
   },
   {
     id: 4,
-    title: 'Stellar Commerce',
-    description: 'Next-gen e-commerce platform with AR product previews and AI-driven personalization engine.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis'],
-    color: '#ff6b35',
-    emoji: '⭐',
-    link: '#',
-    year: '2023',
+    title: 'DropDash',
+    description: 'A secure file-sharing platform that lets users upload, share, and manage files with enhanced security and scalability.',
+    tags: ['Flask', 'Azure Blob', 'Azure CDN'],
+    color: '#4a9eff',
+    emoji: '📦',
+    link: 'https://dropdash.vercel.app',
+    year: '2024',
+  },
+  {
+    id: 5,
+    title: 'Rhythm Reaper',
+    description: 'A Python app that fetches top tracks from Spotify and downloads them in MP3 format using Pytube.',
+    tags: ['Python', 'Spotify API', 'Pytube'],
+    color: '#1DB954',
+    emoji: '🎵',
+    link: 'https://github.com/TusharPachouri/RhythmReaper',
+    year: '2024',
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };

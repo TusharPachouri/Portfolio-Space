@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -10,7 +10,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
 };
@@ -39,32 +39,28 @@ export default function AboutSection() {
 
           {/* Content */}
           <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.75)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-            I'm a full-stack developer and creative technologist based in the universe's
-            most dynamic city. I specialize in crafting high-performance, visually
-            stunning web applications that push the boundaries of what's possible on the
-            modern web platform.
+            I am a 22-year-old developer based in Mathura, India. Fluent in English and Hindi, I specialize in crafting high-performance, visually stunning web applications using Next.js, Python, and scalable architecture paradigms.
           </motion.p>
           <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.6)', lineHeight: 1.9, marginBottom: '2rem' }}>
-            With over 5 years traversing the digital cosmos, I've shipped products to
-            millions of users across 40+ countries. I believe the best code is invisible —
-            what the user experiences is pure gravity-defying magic.
+            Over the past 3 years, I have successfully executed projects ranging from robust backend systems to interactive frontends. I'm currently open for freelance opportunities to help bring your high-impact ideas to life.
           </motion.p>
 
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}
           >
             {[
-              { value: '5+', label: 'Years in Orbit' },
-              { value: '40+', label: 'Projects Launched' },
-              { value: '∞', label: 'Lines Written' },
+              { value: '3+', label: 'Years Exp.' },
+              { value: '5+', label: 'Projects' },
+              { value: '10+', label: 'Certs' },
+              { value: '150+', label: 'Commits' },
             ].map((stat) => (
               <div key={stat.label} style={{ textAlign: 'center' }}>
                 <div
                   style={{
                     fontFamily: 'var(--font-display)',
-                    fontSize: '2.2rem',
+                    fontSize: '1.8rem',
                     fontWeight: 700,
                     background: 'linear-gradient(135deg,#4a9eff,#00d4ff)',
                     WebkitBackgroundClip: 'text',
@@ -76,7 +72,7 @@ export default function AboutSection() {
                 >
                   {stat.value}
                 </div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(232,244,253,0.4)' }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(232,244,253,0.4)' }}>
                   {stat.label}
                 </div>
               </div>
