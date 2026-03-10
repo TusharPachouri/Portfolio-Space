@@ -3,7 +3,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const sections = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
+import { Home, User, Code, FolderGit2, Briefcase, Mail } from 'lucide-react';
+
+const sections = [
+  { name: 'Home', icon: <Home size={18} /> },
+  { name: 'About', icon: <User size={18} /> },
+  { name: 'Skills', icon: <Code size={18} /> },
+  { name: 'Projects', icon: <FolderGit2 size={18} /> },
+  { name: 'Experience', icon: <Briefcase size={18} /> },
+  { name: 'Contact', icon: <Mail size={18} /> },
+];
 
 interface NavProps {
   activeSection: number;
@@ -14,9 +23,18 @@ interface NavProps {
 export default function Navigation({ activeSection, scrollProgress, onNavClick }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     setScrolled(scrollProgress > 0.02);
   }, [scrollProgress]);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <>
@@ -38,15 +56,20 @@ export default function Navigation({ activeSection, scrollProgress, onNavClick }
         </a>
         <ul className="nav-links">
           {sections.map((section, idx) => (
-            <li key={section}>
+            <li key={section.name}>
               <a
-                href={`#${section.toLowerCase()}`}
+                href={`#${section.name.toLowerCase()}`}
                 onClick={(e) => { e.preventDefault(); onNavClick(idx); }}
                 style={{
                   color: activeSection === idx ? 'var(--color-glow-cyan)' : undefined,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
+                className="nav-link-item"
+                title={isMobile ? section.name : undefined}
               >
-                {section}
+                {isMobile ? section.icon : section.name}
               </a>
             </li>
           ))}
@@ -62,10 +85,10 @@ export default function Navigation({ activeSection, scrollProgress, onNavClick }
       >
         {sections.map((section, idx) => (
           <button
-            key={section}
+            key={section.name}
             className={`progress-dot ${activeSection === idx ? 'active' : ''}`}
             onClick={() => onNavClick(idx)}
-            title={section}
+            title={section.name}
             style={{
               background: 'none',
               border: activeSection === idx ? '1px solid var(--color-glow-cyan)' : '1px solid rgba(74,158,255,0.3)',
