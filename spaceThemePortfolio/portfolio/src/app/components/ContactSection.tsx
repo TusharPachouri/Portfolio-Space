@@ -76,24 +76,26 @@ export default function ContactSection() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ textAlign: 'center', position: 'relative' }}
       >
-        <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
-          <span>SECTOR 06 — EVENT HORIZON // FINAL TRANSMISSION</span>
+        <div className="glass-card" style={{ display: 'inline-block', padding: '2rem 3rem' }}>
+          <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <span>SECTOR 06 — EVENT HORIZON // FINAL TRANSMISSION</span>
+          </div>
+          <h2 className="section-title">
+            <span className="text-gradient-blue">Contact</span> Mission Control
+          </h2>
+          <p
+            style={{
+              color: 'rgba(232,244,253,0.9)',
+              maxWidth: '480px',
+              margin: '1rem auto 0',
+              lineHeight: 1.8,
+              fontSize: '0.95rem',
+            }}
+          >
+            On the edge of the event horizon, messages still escape. Let's build
+            something extraordinary together.
+          </p>
         </div>
-        <h2 className="section-title">
-          <span className="text-gradient-blue">Contact</span> Mission Control
-        </h2>
-        <p
-          style={{
-            color: 'rgba(232,244,253,0.5)',
-            maxWidth: '480px',
-            margin: '1rem auto 0',
-            lineHeight: 1.8,
-            fontSize: '0.95rem',
-          }}
-        >
-          On the edge of the event horizon, messages still escape. Let's build
-          something extraordinary together.
-        </p>
       </motion.div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', width: '100%', maxWidth: '900px', position: 'relative' }}>
@@ -216,7 +218,7 @@ export default function ContactSection() {
                     borderRadius: '12px',
                     border: `1px solid ${hoveredLink === link.label ? link.color + '50' : 'rgba(255,255,255,0.07)'}`,
                     background: `rgba(${link.color === '#4a9eff' ? '74,158,255' : link.color === '#0077b5' ? '0,119,181' : link.color === '#00d4ff' ? '0,212,255' : '29,161,242'},0.05)`,
-                    color: hoveredLink === link.label ? link.color : 'rgba(232,244,253,0.7)',
+                    color: hoveredLink === link.label ? link.color : 'rgba(232,244,253,0.95)',
                     textDecoration: 'none',
                     transition: 'all 0.3s ease',
                     cursor: 'pointer',
@@ -269,7 +271,7 @@ export default function ContactSection() {
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: '#00d464', letterSpacing: '0.1em', marginBottom: '4px' }}>
                 PAYMENT ENDPOINTS & LOC
               </div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'rgba(232,244,253,0.5)', lineHeight: 1.6 }}>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'rgba(232,244,253,0.85)', lineHeight: 1.6 }}>
                 <strong>UPI:</strong> tusharpachouri@oksbi<br/>
                 <strong>PayPal:</strong> @tusharpachouri<br/>
                 <strong>LOC:</strong> Mathura, 281001, UP, India
@@ -290,7 +292,7 @@ export default function ContactSection() {
           fontFamily: 'var(--font-mono)',
           fontSize: '0.65rem',
           letterSpacing: '0.2em',
-          color: 'rgba(232,244,253,0.25)',
+          color: 'rgba(232,244,253,0.6)',
           paddingTop: '2rem',
           borderTop: '1px solid rgba(255,255,255,0.05)',
           width: '100%',

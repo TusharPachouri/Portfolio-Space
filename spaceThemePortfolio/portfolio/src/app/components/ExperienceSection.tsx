@@ -43,15 +43,17 @@ export default function ExperienceSection() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         style={{ textAlign: 'center' }}
       >
-        <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
-          <span>SECTOR 05 — ACCRETION DISK // MISSION LOG</span>
+        <div className="glass-card" style={{ display: 'inline-block', padding: '2rem 3rem' }}>
+          <div className="hud-line" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
+            <span>SECTOR 05 — ACCRETION DISK // MISSION LOG</span>
+          </div>
+          <h2 className="section-title">
+            <span className="text-gradient-fire">Experience</span> &amp; Education
+          </h2>
+          <p style={{ color: 'rgba(232,244,253,0.85)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.15em', marginTop: '0.5rem' }}>
+            GRAVITATIONAL HISTORY OF MY JOURNEY
+          </p>
         </div>
-        <h2 className="section-title">
-          <span className="text-gradient-fire">Experience</span> &amp; Education
-        </h2>
-        <p style={{ color: 'rgba(232,244,253,0.5)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.15em', marginTop: '0.5rem' }}>
-          GRAVITATIONAL HISTORY OF MY JOURNEY
-        </p>
       </motion.div>
 
       {/* Experience Timeline */}
@@ -106,7 +108,7 @@ export default function ExperienceSection() {
                   {exp.period}
                 </span>
               </div>
-              <p style={{ color: 'rgba(232,244,253,0.65)', fontSize: '0.9rem', lineHeight: 1.7 }}>
+              <p style={{ color: 'rgba(232,244,253,0.95)', fontSize: '0.9rem', lineHeight: 1.7 }}>
                 {exp.description}
               </p>
             </motion.div>
@@ -128,7 +130,7 @@ export default function ExperienceSection() {
             fontSize: '0.75rem',
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
-            color: 'rgba(255,215,0,0.6)',
+            color: 'rgba(255,215,0,0.95)',
             marginBottom: '1.25rem',
           }}
         >
@@ -152,7 +154,7 @@ export default function ExperienceSection() {
               }}
             >
               <span style={{ fontSize: '1.5rem' }}>{ach.icon}</span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.08em', color: 'rgba(232,244,253,0.65)', lineHeight: 1.4 }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.08em', color: 'rgba(232,244,253,0.9)', lineHeight: 1.4 }}>
                 {ach.label}
               </span>
             </motion.div>

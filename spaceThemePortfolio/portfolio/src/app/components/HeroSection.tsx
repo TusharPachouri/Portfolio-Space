@@ -29,7 +29,8 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Main Title */}
+        <div className="hero-mobile-glass">
+          {/* Main Title */}
         <div className="display-xl" style={{ marginBottom: '1.5rem', lineHeight: 1 }}>
           <span className="text-gradient-blue">Tushar</span>
           <br />
@@ -80,6 +81,7 @@ export default function HeroSection() {
             </a>
           </div>
         </motion.div>
+        </div>
 
         {/* Bottom telemetry */}
         <motion.div

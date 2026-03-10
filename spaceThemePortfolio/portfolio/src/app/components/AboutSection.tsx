@@ -38,10 +38,10 @@ export default function AboutSection() {
           <div className="cosmic-divider" />
 
           {/* Content */}
-          <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.75)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
+          <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.95)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
             I am a 22-year-old developer based in Mathura, India. Fluent in English and Hindi, I specialize in crafting high-performance, visually stunning web applications using Next.js, Python, and scalable architecture paradigms.
           </motion.p>
-          <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.6)', lineHeight: 1.9, marginBottom: '2rem' }}>
+          <motion.p variants={itemVariants} style={{ color: 'rgba(232,244,253,0.9)', lineHeight: 1.9, marginBottom: '2rem' }}>
             Over the past 3 years, I have successfully executed projects ranging from robust backend systems to interactive frontends. I'm currently open for freelance opportunities to help bring your high-impact ideas to life.
           </motion.p>
 
@@ -72,7 +72,7 @@ export default function AboutSection() {
                 >
                   {stat.value}
                 </div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(232,244,253,0.4)' }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(232,244,253,0.75)' }}>
                   {stat.label}
                 </div>
               </div>
